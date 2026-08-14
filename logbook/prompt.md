@@ -2,7 +2,8 @@
 
 <!--
 WHAT THIS FILE IS
-- Owner:  the AGENT. You write and curate this file; the human rarely touches it.
+- Owner:  the AGENT. Written by the agent, for the agent: you write and curate
+          this file; the human rarely touches it.
 - Kind:   the "current picture" — durable, curated, and TASK-AGNOSTIC.
 - Read:   FIRST, at the start of every session, to get back in sync with the
           work package before doing anything else.
