@@ -11,7 +11,7 @@ WHAT THIS FILE IS
 - Promotion: when an entry hardens into a durable, task-agnostic fact, distil a
              one-line summary up into prompt.md and leave the full trail here.
 - Record progress AND dead-ends — a closed-off path is progress worth logging.
-- Status values: see the "Status vocabulary" section of the logbook README.
+- Status values: see the "Vocabulary" section of the logbook SYNC guide (`SYNC.md`).
 -->
 
 <!-- Entry template — copy for each new entry:

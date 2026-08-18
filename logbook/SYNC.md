@@ -1,13 +1,15 @@
-# logbook — how to use the template
+# logbook — sync guide
 
 `logbook` is a plain-text template framework for a human and an AI agent to keep a
 shared, session-crossing record of a piece of work, so the agent can be handed the
 work and pick it up cold.
 
-This guide explains where each type of note goes and its function in the framework.
-If you have never seen logbook before, you should be able to copy the `logbook/`
-directory, define your work package, prepare your workspace, and place your notes
-correctly after reading this once.
+This is the file both parties read to **get in sync**: the human reads it to set up
+the work package, then points the agent at it so the agent learns the same layout.
+It explains where each type of note goes and its function in the framework. If you
+have never seen logbook before, you should be able to copy the `logbook/` directory,
+define your work package, prepare your workspace, and place your notes correctly
+after reading this once.
 
 ## Ownership and Purpose
 
@@ -36,10 +38,11 @@ themselves. They are correlated but need not match in tone or level of detail.
 
 ```
 <work-package>/
-├── prompt.md          # AGENT: the current picture — read first, every session
-├── diary.md           # AGENT: the trail — what happened, newest on top
+├── SYNC.md            # HUMAN/AGENT: the sync guide — read this to get in sync
 ├── development.md     # HUMAN: the trail — your running execution notes
 ├── index.md           # HUMAN: annotated links to everything relevant
+├── prompt.md          # AGENT: the current picture — read first, every session
+├── diary.md           # AGENT: the trail — what happened, newest on top
 └── resources/         # SHARED: specs, tickets, logs, artifacts (human-owned)
     └── ABOUT.md       # placeholder
 ```
@@ -65,21 +68,33 @@ it belongs in `prompt.md` (agent) or `resources/` (shared material).
 
 ## How to Start
 
-First, define your work package and gather the resources needed to start the first
-task.
+This is the sync method — the ritual that hands a work package from human to agent.
+Do the steps in order.
 
-These can be a ticket, a specification, or notes distilled from one or more meetings;
-place them in the work package's `resources/` directory. Be specific about what you
-want to achieve, and provide both what you already have and what you still need to
-complete the task. Remember that code is a means to fulfil a project, not the product
-itself — it only captures one point of view of the reality. It is up to the person
-driving the work package to build that context from their interactions with the
-stakeholders.
+**Human — set up the work package:**
 
-Once that is in place, let the AI agent sync with the workspace using this same
-`GUIDE.md` — it is written for human and agent alike. Then point the agent at the
-work package's resources. With those, it should have enough to start filling in its
-own files (`prompt.md`, `diary.md`) from its understanding.
+1. **Read this guide.** It is written for human and agent alike.
+2. **Define the work package and gather resources.** These can be a ticket, a
+   specification, or notes distilled from one or more meetings; place them in the
+   work package's `resources/` directory. Be specific about what you want to
+   achieve, and provide both what you already have and what you still need.
+   Remember that code is a means to fulfil a project, not the product itself — it
+   only captures one point of view of reality. It is up to the person driving the
+   work package to build that context from their interactions with stakeholders.
+3. **Prime the map and the trail.** Add annotated links to `index.md`, and write
+   the first lines of `development.md` so there is a starting point to build on.
+
+**Handoff:**
+
+4. **Point the agent at this file (`SYNC.md`) to sync**, then at the work package's
+   `resources/`.
+
+**Agent — pick up the work:**
+
+5. **Read the guide and resources, learn the layout, and start working.** With that
+   context the agent has enough to begin filling in its own files (`prompt.md`,
+   `diary.md`). Each file's header block explains how that file is used, so the
+   agent can move around the `logbook/` directory without further instruction.
 
 ## Vocabulary
 
