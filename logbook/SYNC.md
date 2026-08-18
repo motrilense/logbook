@@ -96,6 +96,37 @@ Do the steps in order.
    `diary.md`). Each file's header block explains how that file is used, so the
    agent can move around the `logbook/` directory without further instruction.
 
+## The Working Loop
+
+The first sync happens once. After it, the work package runs as a loop of short
+human–agent handovers, each side keeping its own trail and passing the baton across
+`development.md`.
+
+**Human — keep the trail moving:**
+
+- Record actions and status in `development.md` as you go — decisions taken in
+  meetings, blockers hit, scope changes.
+- Drop new material into `resources/` — machine logs to investigate, design drafts,
+  trade-off notes.
+- Add any new relevant links to `index.md`.
+- Treat every document on a need-to-know basis for the agent, and redact confidential
+  information before it lands. Keeping the trail takes discipline, but the information
+  passes through you either way — the work cannot progress without it.
+
+**Handoff — request the agent:**
+
+- Write the request at the bottom of `development.md` and point the agent at that last
+  section.
+
+**Agent — work the request:**
+
+- Read that last section of `development.md`, then explore the `logbook/` to build the
+  picture: context knowledge plus task definition.
+- Execute the task, analyse the outcome, and update `diary.md` and/or `prompt.md`
+  accordingly.
+
+Then control returns to the human, and the loop repeats.
+
 ## Vocabulary
 
 `logbook` uses a small, fixed set of status words. There are **two axes** — do not
