@@ -1,4 +1,4 @@
-# post-morten.md — the close-out summary
+# post-mortem.md — the close-out summary
 
 <!--
 WHAT THIS FILE IS

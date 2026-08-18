@@ -1,0 +1,26 @@
+# Captured from CI run #4213 (PR #211 branch), e2e job — the reproduction reference.
+# Exploratory resource: safe to delete once FLAKE-88 is closed.
+
+============================= test session starts ==============================
+platform linux -- Python 3.11.6, pytest-8.1.1, pluggy-1.4.0
+rootdir: /home/runner/work/webapp/webapp
+plugins: django-4.8.0, xdist-3.5.0
+collected 1 item
+
+tests/e2e/test_login.py::test_login_redirects_to_dashboard FAILED         [100%]
+
+=================================== FAILURES ===================================
+___________________ test_login_redirects_to_dashboard _________________________
+
+    def test_login_redirects_to_dashboard(driver, live_server):
+        login(driver, user="demo", password="demo")
+        time.sleep(1)  # wait for the redirect
+>       assert driver.current_url.endswith("/dashboard")
+E       AssertionError: assert False
+E        +  where False = <built-in method endswith of str>('/dashboard')
+E        +    where '/login?next=/dashboard' = <WebDriver ...>.current_url
+
+tests/e2e/test_login.py:44: AssertionError
+=========================== short test summary info ============================
+FAILED tests/e2e/test_login.py::test_login_redirects_to_dashboard
+========================= 1 failed in 12.31s ==================================
