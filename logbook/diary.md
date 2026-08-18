@@ -17,7 +17,7 @@ WHAT THIS FILE IS
 <!-- Entry template — copy for each new entry:
 
 ## YYYY-MM-DD — <short title>
-Status: OPEN | DONE | BLOCKED | WONTDO
+Status: ONGOING | BLOCKED | DONE | WONTDO
 Context: <why we're doing this / what triggered it>
 Findings: <what we learned, commands run, evidence links>
 Outcome / next: <result, follow-ups, and any promotion to prompt.md>

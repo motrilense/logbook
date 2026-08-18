@@ -1,5 +1,7 @@
 # logbook — sync guide
 
+> **Framework version:** `a1.0.0` (alpha)
+
 `logbook` is a plain-text template framework for a human and an AI agent to keep a
 shared, session-crossing record of a piece of work, so the agent can be handed the
 work and pick it up cold.
@@ -43,6 +45,7 @@ themselves. They are correlated but need not match in tone or level of detail.
 ├── index.md           # HUMAN: annotated links to everything relevant
 ├── prompt.md          # AGENT: the current picture — read first, every session
 ├── diary.md           # AGENT: the trail — what happened, newest on top
+├── post-morten.md     # AGENT→HUMAN: the close-out summary, written when work ends
 └── resources/         # SHARED: specs, tickets, logs, artifacts (human-owned)
     └── ABOUT.md       # placeholder
 ```
@@ -127,29 +130,52 @@ human–agent handovers, each side keeping its own trail and passing the baton a
 
 Then control returns to the human, and the loop repeats.
 
+## Closing a Work Package
+
+When the work is finished — or parked for good — the human triggers a **close-out**.
+The point is to leave the package clean and to hand the human a readable retrospective.
+The human asks the agent to close it out; the agent then does two things, in order.
+
+**1. Prune the agent's own files.** With everything learned across the work package,
+the agent revisits its notes for a future reader that is *itself*:
+
+- `prompt.md` — leave only perdurable, task-agnostic facts about this workspace;
+  strip out noise and detail specific to individual tasks.
+- `diary.md` — compact or simplify entries that ballooned into small steps, while
+  keeping the trail complete. Nothing worth revisiting is lost, just tightened.
+
+**2. Write the close-out summary.** The agent then fills in `post-morten.md` — the one
+file it writes *for the human*. It reads the human-owned notes (`index.md`,
+`development.md`) and, where needed, `resources/`, to reconstruct how the work went;
+it does **not** modify those human files. The agent supplies the pattern-finding and
+abstraction, but writes in the human's tone (mirror `development.md`) so the human can
+skim it with a low entry barrier. `post-morten.md`'s own header explains what each
+section should hold.
+
+The result is a helicopter view the human can read end to end to see what happened and
+why — a standard software post-mortem, kept useful rather than ceremonial.
+
 ## Vocabulary
 
-`logbook` uses a small, fixed set of status words. There are **two axes** — do not
-mix them.
+`logbook` uses one small set of status words — a single lifecycle you can put on
+anything you track: a checklist item, a sub-task, or a diary / `development.md` entry.
 
-**Item state** — the progress of a to-do or checklist item:
+| Word      | Meaning                                                  |
+|-----------|----------------------------------------------------------|
+| `TODO`    | identified, not started                                  |
+| `ONGOING` | in progress / still open                                 |
+| `BLOCKED` | cannot proceed; waiting on something external (say what) |
+| `DONE`    | finished, with something that verified it                |
+| `WONTDO`  | deliberately dropped (record why)                        |
 
-| Word      | Meaning                          |
-|-----------|----------------------------------|
-| `TODO`    | not started                      |
-| `ONGOING` | in progress                      |
-| `DONE`    | the item is finished             |
+The happy path is `TODO → ONGOING → DONE`; `BLOCKED` and `WONTDO` are the two ways
+out. Where it shows up:
 
-**Outcome** — how an investigation or trail entry ended:
+- On a **checklist or plan**, tag each item with its state.
+- On a **diary or `development.md` entry**, the `Status:` line records where that
+  thread stands right now — usually `DONE` (you finished and something verified it)
+  or `ONGOING` (still open), sometimes `BLOCKED` or `WONTDO`. You rarely file an
+  entry for a `TODO`, because writing one means you have already started.
 
-| Word      | Meaning                                        |
-|-----------|------------------------------------------------|
-| `OPEN`    | still in progress / unresolved                 |
-| `DONE`    | resolved, with something that verified it      |
-| `BLOCKED` | cannot proceed; waiting on an external thing   |
-| `WONTDO`  | deliberately not doing it (record why)         |
-
-> `DONE` appears in both axes — that is intentional but easy to confuse. Read it
-> by context: on a checklist item it means *the item is finished*; on a diary or
-> development entry it means *this line of work reached a verified result*. When
-> in doubt, prefer the entry-level `Status:` line to state the outcome.
+`DONE` means exactly one thing everywhere — *finished and verified* — so there is no
+second axis to keep straight.

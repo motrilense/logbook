@@ -27,8 +27,8 @@ Across all of them the same shape kept appearing on its own: an index that maps 
    - *Trail* - the time-ordered execution log; raw and archivable.
    - *Distilled notes* - atomic, perdurable knowledge promoted out of the trail.
 4. **Plain text, always annotated**: every link and artifact carries a one-line "what / why".
-5. **Small status vocabulary**: `TODO` · `ONGOING` · `DONE`, and outcomes
-   `OPEN` · `DONE` · `BLOCKED` · `WONTDO`.
+5. **Small status vocabulary**: one lifecycle — `TODO` · `ONGOING` · `BLOCKED` ·
+   `DONE` · `WONTDO` — for checklist items and trail entries alike.
 6. **Promotion & archival**: trail → distilled → current picture; spent noise is archived,
    never lost.
 
