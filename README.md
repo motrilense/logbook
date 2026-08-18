@@ -28,7 +28,7 @@ Across all of them the same shape kept appearing on its own: an index that maps 
    - *Distilled notes* - atomic, perdurable knowledge promoted out of the trail.
 4. **Plain text, always annotated**: every link and artifact carries a one-line "what / why".
 5. **Small status vocabulary**: `TODO` · `ONGOING` · `DONE`, and outcomes
-   `OPEN` · `DONE` · `BLOCKED` · `WONTFIX`.
+   `OPEN` · `DONE` · `BLOCKED` · `WONTDO`.
 6. **Promotion & archival**: trail → distilled → current picture; spent noise is archived,
    never lost.
 
