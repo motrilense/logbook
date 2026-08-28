@@ -1,5 +1,21 @@
 # diary.md — login flake work package
-_Agent-owned · my trail · newest entry on top._
+
+<!--
+WHAT THIS FILE IS
+- Owner:     the AGENT. Written by the agent, for the agent.
+- Purpose:   the "trail" — a time-ordered log of what actually happened.
+- Direction: NEWEST ENTRY ON TOP (prepend, never append).
+- Partner:   development.md is the human's trail of the same work. Think of two
+             people on the same project: each keeps their own account of the same
+             events, from a different point of view, out of a different experience,
+             in their own writing style. The two are companions, not copies.
+- Promotion: when an entry hardens into a durable, task-agnostic fact, distil a
+             one-line summary up into prompt.md and leave the full trail here.
+- Record progress AND dead-ends — a closed-off path is progress worth logging.
+- Status values: see the "Vocabulary" section of the logbook SYNC guide (`SYNC.md`).
+-->
+
+<!-- Newest entry goes directly below this line. -->
 
 ## 2026-08-15 — Close-out: pruned my files, wrote the post-mortem
 Status: DONE

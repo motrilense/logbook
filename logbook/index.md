@@ -3,7 +3,7 @@
 <!--
 WHAT THIS FILE IS
 - Owner: the HUMAN. Written by the human, for the human.
-- Kind:  the single entry point — annotated links to everything relevant.
+- Purpose: the single entry point — annotated links to everything relevant.
 - Rule:  never a bare URL. Every link = URL + one line of what/why.
 -->
 

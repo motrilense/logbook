@@ -8,10 +8,10 @@ work and pick it up cold.
 
 This is the file both parties read to **get in sync**: the human reads it to set up
 the work package, then points the agent at it so the agent learns the same layout.
-It explains where each type of note goes and its function in the framework. If you
-have never seen logbook before, you should be able to copy the `logbook/` directory,
-define your work package, prepare your workspace, and place your notes correctly
-after reading this once.
+It explains where each type of note goes and its function in the framework. Anyone
+who has never seen logbook before should be able to copy the `logbook/` directory,
+define the work package, prepare the workspace, and place notes correctly after
+reading this once.
 
 ## Ownership and Purpose
 
@@ -22,15 +22,18 @@ gaps). Inside it, notes split two ways at once:
 - **by kind** — a durable *current picture*, a time-ordered *trail*, and a shared
   pool of *resources*.
 
-Cross those two axes and you get the full set of files:
+Cross those two axes and you get the full set of files. They are listed here in the
+order they usually come into play across a work package:
 
-| File / dir       | Owner | Kind            | Written           |
-|------------------|-------|-----------------|-------------------|
-| `prompt.md`      | Agent | current picture | curated, kept short |
-| `diary.md`       | Agent | trail           | newest on top     |
-| `development.md` | Human | trail           | top-down, as you go |
-| `index.md`       | Human | links (the map) | annotated links   |
-| `resources/`     | Human | ground truth    | dropped in as needed |
+| File / dir       | Owner       | Kind            | Written                |
+|------------------|-------------|-----------------|------------------------|
+| `SYNC.md`        | Human/Agent | the guide       | read to get in sync    |
+| `index.md`       | Human       | links (the map) | annotated links        |
+| `resources/`     | Human       | ground truth    | dropped in as needed   |
+| `development.md` | Human       | trail           | top-down, as it goes   |
+| `prompt.md`      | Agent       | current picture | curated, kept short    |
+| `diary.md`       | Agent       | trail           | newest on top          |
+| `post-mortem.md` | Agent→Human | close-out       | written when work ends |
 
 The two trails (`diary.md` and `development.md`) describe similar events from
 two points of view: the agent narrates for a future agent; the human jots for
@@ -41,13 +44,13 @@ themselves. They are correlated but need not match in tone or level of detail.
 ```
 <work-package>/
 ├── SYNC.md            # HUMAN/AGENT: the sync guide — read this to get in sync
-├── development.md     # HUMAN: the trail — your running execution notes
 ├── index.md           # HUMAN: annotated links to everything relevant
+├── resources/         # SHARED: specs, notes, logs, artifacts (human-owned)
+│   └── ABOUT.md       # placeholder
+├── development.md     # HUMAN: the trail — the human's running execution notes
 ├── prompt.md          # AGENT: the current picture — read first, every session
 ├── diary.md           # AGENT: the trail — what happened, newest on top
-├── post-mortem.md     # AGENT→HUMAN: the close-out summary, written when work ends
-└── resources/         # SHARED: specs, tickets, logs, artifacts (human-owned)
-    └── ABOUT.md       # placeholder
+└── post-mortem.md     # AGENT→HUMAN: the close-out summary, written when work ends
 ```
 
 Copy the `logbook/` directory and start filling it in.
@@ -59,11 +62,11 @@ Ask two questions: **who owns it** and **how long is it true**.
 - A durable fact the agent needs to start cold (architecture, where things live,
   a command that works, a recurring gotcha) → **`prompt.md`**, written by the agent.
 - Something that just happened (a step taken, a result, a dead-end) that is worth
-  keeping track of → **`diary.md`** for the agent, **`development.md`** for you.
-- A link to a repo, ticket, PR, or doc — always with one line of what/why, never a
-  bare URL → **`index.md`**, maintained by you.
-- A spec, ticket text, diagram, log, or artifact → **`resources/`**, provided by you
-  as the person driving the work package forward.
+  keeping track of → **`diary.md`** for the agent, **`development.md`** for the human.
+- A link to a repo, change, or document — always with one line of what/why, never a
+  bare URL → **`index.md`**, maintained by the human.
+- A spec, a written brief, a diagram, a log, or an artifact → **`resources/`**,
+  provided by the human driving the work package forward.
 
 Rule of thumb: if a note only makes sense inside one investigation (timestamps,
 "then I tried X"), it belongs in a trail. If it stays true after the task closes,
@@ -77,10 +80,10 @@ Do the steps in order.
 **Human — set up the work package:**
 
 1. **Read this guide.** It is written for human and agent alike.
-2. **Define the work package and gather resources.** These can be a ticket, a
+2. **Define the work package and gather resources.** These can be a written brief, a
    specification, or notes distilled from one or more meetings; place them in the
-   work package's `resources/` directory. Be specific about what you want to
-   achieve, and provide both what you already have and what you still need.
+   work package's `resources/` directory. Be specific about what the work aims to
+   achieve, and provide both what is already in hand and what is still needed.
    Remember that code is a means to fulfil a project, not the product itself — it
    only captures one point of view of reality. It is up to the person driving the
    work package to build that context from their interactions with stakeholders.

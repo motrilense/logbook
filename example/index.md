@@ -1,5 +1,11 @@
 # index.md — login flake work package
-_Human-owned · the map · annotated links only, never a bare URL._
+
+<!--
+WHAT THIS FILE IS
+- Owner: the HUMAN. Written by the human, for the human.
+- Purpose: the single entry point — annotated links to everything relevant.
+- Rule:  never a bare URL. Every link = URL + one line of what/why.
+-->
 
 ## Repositories
 - [acme/webapp](https://github.com/acme/webapp) — the app that owns the flaky login

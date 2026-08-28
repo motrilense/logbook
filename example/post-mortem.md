@@ -1,5 +1,25 @@
 # post-mortem.md — login flake work package
-_Agent-written for the human · the close-out · read this to see how it went._
+
+<!--
+WHAT THIS FILE IS
+- Owner:  the AGENT writes it, the HUMAN reads it. This is the one file the agent
+          authors *for the human*, not for a future agent.
+- Purpose: the close-out — a one-time retrospective produced when a work package is
+           finished (or parked for good). It is the helicopter view of how the work
+           went and what happened along the way.
+- When:   filled in last, as part of the "close-out" action (see the "Closing a
+          Work Package" section of SYNC.md). Do it AFTER pruning `prompt.md` and
+          `diary.md`, so the picture is clean before you summarise it.
+- Source: build it from both trails (`diary.md`, `development.md`), the map
+          (`index.md`), and `resources/`. You READ the human-owned files to gather
+          the story; you do NOT modify them.
+- Voice:  you do the pattern-finding and abstraction, but write in the HUMAN's tone
+          — mirror the wording and register of `development.md`. The target reader
+          is the human, so keep the entry barrier low: plain, honest, skimmable.
+          Favour a short narrative over a metrics dump.
+- Note:   a post-mortem is standard practice in software projects. Keep it useful,
+          not ceremonial — cut any section that has nothing real to say.
+-->
 
 ## Summary
 The login e2e test was going red about 1 in 5 CI runs and blocking the release tag.

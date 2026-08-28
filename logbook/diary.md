@@ -3,7 +3,7 @@
 <!--
 WHAT THIS FILE IS
 - Owner:     the AGENT. Written by the agent, for the agent.
-- Kind:      the "trail" — a time-ordered log of what actually happened.
+- Purpose:   the "trail" — a time-ordered log of what actually happened.
 - Direction: NEWEST ENTRY ON TOP (prepend, never append).
 - Counterpart: development.md is the human's trail of the same work. The two
              cover the same events from different points of view; they do not
@@ -17,7 +17,7 @@ WHAT THIS FILE IS
 <!-- Entry template — copy for each new entry:
 
 ## YYYY-MM-DD — <short title>
-Status: ONGOING | BLOCKED | DONE | WONTDO
+Status: TODO | ONGOING | BLOCKED | DONE | WONTDO
 Context: <why we're doing this / what triggered it>
 Findings: <what we learned, commands run, evidence links>
 Outcome / next: <result, follow-ups, and any promotion to prompt.md>

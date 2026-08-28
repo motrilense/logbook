@@ -4,9 +4,9 @@
 WHAT THIS FILE IS
 - Owner:  the AGENT writes it, the HUMAN reads it. This is the one file the agent
           authors *for the human*, not for a future agent.
-- Kind:   the close-out — a one-time retrospective produced when a work package is
-          finished (or parked for good). It is the helicopter view of how the work
-          went and what happened along the way.
+- Purpose: the close-out — a one-time retrospective produced when a work package is
+           finished (or parked for good). It is the helicopter view of how the work
+           went and what happened along the way.
 - When:   filled in last, as part of the "close-out" action (see the "Closing a
           Work Package" section of SYNC.md). Do it AFTER pruning `prompt.md` and
           `diary.md`, so the picture is clean before you summarise it.
